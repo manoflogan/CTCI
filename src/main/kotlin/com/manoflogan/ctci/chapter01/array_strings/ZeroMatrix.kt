@@ -4,7 +4,7 @@ package com.manoflogan.ctci.chapter01.array_strings
  * Write an algorithm such as if an element in M X N matrix is 0, then the entire row, and column is
  * set to 0.
  */
-fun main() {
+/*fun main() {
     val matrix = arrayOf(
         intArrayOf(2, 0, 3),
         intArrayOf(1, 7, 5),
@@ -15,7 +15,7 @@ fun main() {
     }.toTypedArray()
     printMatrix(zeroMatrixOne(matrix))
     printMatrix(zeroMatrixTwo(matrixTwo))
-}
+}*/
 
 private fun zeroMatrixOne(matrix: Array<IntArray>): Array<IntArray> {
     if (matrix.isEmpty() || matrix[0].isEmpty()) {
