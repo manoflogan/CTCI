@@ -6,9 +6,9 @@ import com.manoflogan.ctci.chapter02.linked_list.ListNodes.listNode
  * Implement an algorithm to delete a node in the middle of a singly linked list, given only access
  * to the node.
  */
-/*fun main() {
+fun main() {
     deleteMiddleNode(listNode)?.display()
-}*/
+}
 
 private fun deleteMiddleNode(node: ListNode): ListNode? {
     var slow: ListNode? = node
