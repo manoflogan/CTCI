@@ -1,5 +1,7 @@
 package com.manoflogan.ctci.chapter02.linked_list
 
+import com.manoflogan.ctci.Node
+
 /**
  * Given the head of a singly linked list, return true if it is a
  * palindrome

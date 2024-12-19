@@ -1,5 +1,6 @@
 package com.manoflogan.ctci.chapter02.linked_list
 
+import com.manoflogan.ctci.Node
 import com.manoflogan.ctci.chapter02.linked_list.ListNodes.listNode
 
 /**

@@ -1,5 +1,7 @@
 package com.manoflogan.ctci.chapter02.linked_list
 
+import com.manoflogan.ctci.Node
+
 /**
  * 1 -> 2 -> 3 -> 2 - > 1 -> 4
  * 1 -> 2 -> 3 > 4

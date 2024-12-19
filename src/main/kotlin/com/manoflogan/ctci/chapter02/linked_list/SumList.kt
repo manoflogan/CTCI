@@ -1,5 +1,7 @@
 package com.manoflogan.ctci.chapter02.linked_list
 
+import com.manoflogan.ctci.Node
+
 /**
  * You have two numbers represented by a linked list, where each node contains a single digit.
  */

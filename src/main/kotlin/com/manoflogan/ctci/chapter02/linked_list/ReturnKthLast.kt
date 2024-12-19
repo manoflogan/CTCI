@@ -1,5 +1,7 @@
 package com.manoflogan.ctci.chapter02.linked_list
 
+import com.manoflogan.ctci.Node
+
 /**
  * Implement an algorithm to find the kth to last element of a singly linked list.
  */

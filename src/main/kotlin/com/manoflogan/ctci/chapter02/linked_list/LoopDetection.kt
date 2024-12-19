@@ -1,5 +1,7 @@
 package com.manoflogan.ctci.chapter02.linked_list
 
+import com.manoflogan.ctci.Node
+
 /**
  * Given a linked list which might contain a loop, implement an algorithm that returns the node
  * at the beginning of the loop.

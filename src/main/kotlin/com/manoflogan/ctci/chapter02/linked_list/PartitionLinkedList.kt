@@ -1,5 +1,7 @@
 package com.manoflogan.ctci.chapter02.linked_list
 
+import com.manoflogan.ctci.Node
+
 /**
  * Write code to partition a linked list around "x", such that all nodes less than "x" comes before
  * all nodes greater than or equal to "x".

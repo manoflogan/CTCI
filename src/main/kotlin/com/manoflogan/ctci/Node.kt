@@ -1,4 +1,4 @@
-package com.manoflogan.ctci.chapter02.linked_list
+package com.manoflogan.ctci
 
 /**
  * Implementation of [Node] implementation

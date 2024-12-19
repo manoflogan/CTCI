@@ -1,5 +1,7 @@
 package com.manoflogan.ctci.chapter02.linked_list
 
+import com.manoflogan.ctci.Node
+
 /**
  * Given two singly linked lists, determine if the two lists intersect. If the kth node in one
  * linked list is the same as the jth node in another linked list, then they intersect
