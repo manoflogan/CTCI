@@ -20,17 +20,17 @@ package com.manoflogan.ctci.chapter02.linked_list
  */
 
 fun main() {
-    val nodes = ListNode(1).apply {
-        next = ListNode(2).apply {
-            next = ListNode(2).apply {
-                next = ListNode(1)
+    val nodes = Node(1).apply {
+        next = Node(2).apply {
+            next = Node(2).apply {
+                next = Node(1)
             }
         }
     }
     println(isPalindrome(nodes))
 }
 
-fun isPalindrome(head: ListNode?): Boolean {
+fun isPalindrome(head: Node?): Boolean {
     head ?: return true
     val reverseList = reverseNode(endOfFirstHalf(head)?.next)
     var first = head
@@ -45,7 +45,7 @@ fun isPalindrome(head: ListNode?): Boolean {
     return true
 }
 
-private fun endOfFirstHalf(head: ListNode?): ListNode? {
+private fun endOfFirstHalf(head: Node?): Node? {
     var fast = head
     var slow = head
     while (fast?.next?.next != null) {
@@ -55,10 +55,10 @@ private fun endOfFirstHalf(head: ListNode?): ListNode? {
     return slow?.next
 }
 
-private fun reverseNode(listNode: ListNode?): ListNode? {
+private fun reverseNode(listNode: Node?): Node? {
     var current = listNode
-    var next: ListNode? = null
-    var prev: ListNode? = null
+    var next: Node? = null
+    var prev: Node? = null
     while (current != null) {
         next = current.next
         current.next = prev

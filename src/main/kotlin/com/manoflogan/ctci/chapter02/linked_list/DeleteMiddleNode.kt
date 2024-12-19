@@ -10,9 +10,9 @@ fun main() {
     deleteMiddleNode(listNode)?.display()
 }
 
-private fun deleteMiddleNode(node: ListNode): ListNode? {
-    var slow: ListNode? = node
-    var fast: ListNode? = node
+private fun deleteMiddleNode(node: Node): Node? {
+    var slow: Node? = node
+    var fast: Node? = node
     var unique = slow
     while(fast?.next?.next != null) {
         slow = slow?.next

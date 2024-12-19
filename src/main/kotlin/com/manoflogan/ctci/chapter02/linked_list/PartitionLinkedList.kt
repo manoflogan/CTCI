@@ -5,13 +5,13 @@ package com.manoflogan.ctci.chapter02.linked_list
  * all nodes greater than or equal to "x".
  */
 fun main() {
-    val listNode = ListNode(3).apply {
-        next = ListNode(5).apply {
-            next = ListNode(8).apply {
-                next = ListNode(5).apply {
-                    next = ListNode(10).apply {
-                        next = ListNode(2).apply {
-                            next = ListNode(1)
+    val listNode = Node(3).apply {
+        next = Node(5).apply {
+            next = Node(8).apply {
+                next = Node(5).apply {
+                    next = Node(10).apply {
+                        next = Node(2).apply {
+                            next = Node(1)
                         }
                     }
                 }
@@ -21,14 +21,14 @@ fun main() {
     partition(listNode, 5)?.display()
 }
 
-fun partition(node: ListNode, k: Int): ListNode? {
+fun partition(node: Node, k: Int): Node? {
     node ?: return null
-    var listNode: ListNode? = ListNode(-1)
-    var head: ListNode? = node
+    var listNode: Node? = Node(-1)
+    var head: Node? = node
     val newNode = listNode
     while (head != null) {
         if (head.value < k) {
-            listNode?.next = ListNode(head.value)
+            listNode?.next = Node(head.value)
             listNode = listNode?.next
         }
         head = head.next
@@ -36,7 +36,7 @@ fun partition(node: ListNode, k: Int): ListNode? {
     head = node
     while (head != null) {
         if (head.value >= k) {
-            listNode?.next = ListNode(head.value)
+            listNode?.next = Node(head.value)
             listNode = listNode?.next
         }
         head = head.next

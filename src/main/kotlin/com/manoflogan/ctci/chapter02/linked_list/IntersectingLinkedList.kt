@@ -5,17 +5,17 @@ package com.manoflogan.ctci.chapter02.linked_list
  * linked list is the same as the jth node in another linked list, then they intersect
  */
 fun main() {
-    val first = ListNode(1).apply {
-        next = ListNode(2).apply {
-            next = ListNode(2).apply {
-                next = ListNode(1)
+    val first = Node(1).apply {
+        next = Node(2).apply {
+            next = Node(2).apply {
+                next = Node(1)
             }
         }
     }
 
-    val second = ListNode(2).apply {
-        next = ListNode(3).apply {
-            next = ListNode(3).apply {
+    val second = Node(2).apply {
+        next = Node(3).apply {
+            next = Node(3).apply {
                 next = first.next?.next
             }
         }
@@ -24,9 +24,9 @@ fun main() {
     println(doesIntersectingListTwoPoints(first, second))
 }
 
-private fun doesIntersectingListTwoPoints(firstNode: ListNode, secondNode: ListNode): Boolean {
-    var first: ListNode? = firstNode
-    var second: ListNode? = secondNode
+private fun doesIntersectingListTwoPoints(firstNode: Node, secondNode: Node): Boolean {
+    var first: Node? = firstNode
+    var second: Node? = secondNode
     while (first != second) {
         first = first?.next ?: second
         second = second?.next ?: first
@@ -34,7 +34,7 @@ private fun doesIntersectingListTwoPoints(firstNode: ListNode, secondNode: ListN
     return first != null
 }
 
-private fun doesIntersectingListWithLength(firstNode: ListNode, secondNode: ListNode): Boolean {
+private fun doesIntersectingListWithLength(firstNode: Node, secondNode: Node): Boolean {
     val firstLen = length(firstNode)
     val secondLen = length(secondNode)
     return (if (firstLen < secondLen) {
@@ -45,8 +45,8 @@ private fun doesIntersectingListWithLength(firstNode: ListNode, secondNode: List
     )
 }
 
-private fun length(node: ListNode): Int {
-    var current: ListNode? = node
+private fun length(node: Node): Int {
+    var current: Node? = node
     var count = 0
     while (current != null) {
         count ++
@@ -55,9 +55,9 @@ private fun length(node: ListNode): Int {
     return count
 }
 
-private fun isIntersecting(diff: Int, longerNode: ListNode, shorterNode: ListNode): Boolean {
-    var first: ListNode? = longerNode
-    var second: ListNode? = shorterNode
+private fun isIntersecting(diff: Int, longerNode: Node, shorterNode: Node): Boolean {
+    var first: Node? = longerNode
+    var second: Node? = shorterNode
     for (i in 0.until(diff)) {
         first = first?.next
     }

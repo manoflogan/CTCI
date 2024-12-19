@@ -21,13 +21,13 @@ package com.manoflogan.ctci.chapter02.linked_list
     kNode?.display()
 } */
 
-private fun findKthLinkedList(node: ListNode, k: Int): ListNode? {
-    var head: ListNode? = node
+private fun findKthLinkedList(node: Node, k: Int): Node? {
+    var head: Node? = node
     for (i in 0 until k) {
         head = head?.next
     }
     head ?: return null
-    var trailing: ListNode? = node
+    var trailing: Node? = node
     while (head != null) {
         head = head.next
         trailing = trailing?.next
@@ -36,8 +36,8 @@ private fun findKthLinkedList(node: ListNode, k: Int): ListNode? {
 }
 
 var count = 0
-var kNode: ListNode? = null
-private fun findKthLinkedListRecursive(node: ListNode?, k: Int) {
+var kNode: Node? = null
+private fun findKthLinkedListRecursive(node: Node?, k: Int) {
     node ?: return
     findKthLinkedListRecursive(node.next, k)
     count ++

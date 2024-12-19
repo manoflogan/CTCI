@@ -1,12 +1,12 @@
 package com.manoflogan.ctci.chapter02.linked_list
 
 /**
- * Implementation of [ListNode] implementation
+ * Implementation of [Node] implementation
  */
-class ListNode(
+class Node(
     val value: Int
 ) {
-    var next: ListNode? = null
+    var next: Node? = null
 
     fun display() {
         println(

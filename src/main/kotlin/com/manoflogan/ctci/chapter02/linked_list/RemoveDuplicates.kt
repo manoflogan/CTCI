@@ -11,11 +11,11 @@ package com.manoflogan.ctci.chapter02.linked_list
     removeDuplicates(listNode).display()
 }*/
 
-fun removeDuplicates(node: ListNode): ListNode {
+fun removeDuplicates(node: Node): Node {
     val valuesSet = mutableSetOf<Int>()
-    var head: ListNode? = node
+    var head: Node? = node
     val unique = node
-    var prev: ListNode? = node
+    var prev: Node? = node
     while(head != null) {
         if (valuesSet.contains(head.value)) {
             prev?.next = head.next
